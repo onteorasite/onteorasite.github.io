@@ -26,13 +26,8 @@
   
    <style>
        #map {
-        height: 234px;
-        width: 454px;
-       }
-       
-       #map2 {
-        height: 234px;
-        width: 454px;
+        height: 500px;
+        width: 100%;
        }
     </style>
 
@@ -216,7 +211,7 @@ var STYLE_PREFIX = 'wsite';
     </div>
 
     <div class="content-wrap">
-      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+      <div class="clearfix" id="wsite-content" class="wsite-elements wsite-not-footer">
 	<div class="wsite-section-wrap">
 	<div class="wsite-section wsite-body-section wsite-background-1" style="height: 1407px;" >
 		<div class="wsite-section-content">
@@ -274,26 +269,6 @@ var STYLE_PREFIX = 'wsite';
 
 <div class="paragraph" style="text-align:center;">*** Free Appetizers / Cash Bar ***</div>
 
-<div class="wsite-map">
-	 <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: 42.040209, lng: -74.123670};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs9uKaWRwSJCTvrHDL9M4VCN1p8OOjM40&callback=initMap">
-    </script>
-	</div>
-
 
 					
 				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 0px;">
@@ -311,27 +286,6 @@ var STYLE_PREFIX = 'wsite';
 
 <div class="paragraph" style="text-align:center;"><span style="color:rgb(34, 34, 34)">*** Cash Bar ***<br /><font size="2">Note: Formerly Mount Pleasant Lodge</font></span></div>
 
-<div class="wsite-map">
- <div id="map2"></div>
-    <script>
-      function initMap2() {
-        var uluru2 = {lat: 42.052093, lng: 74.289637};
-        var map2 = new google.maps.Map(document.getElementById('map2'), {
-          zoom: 15,
-          center: uluru2
-        });
-        var marker2 = new google.maps.Marker({
-          position: uluru2,
-          map: map2
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs9uKaWRwSJCTvrHDL9M4VCN1p8OOjM40&callback=initMap2">
-    </script>
-	</div>
-
-
 					
 				</td>			</tr>
 		</tbody>
@@ -340,7 +294,33 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div style="height: 40px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
-<div style="height: 40px; overflow: hidden; width: 100%;"></div></div>
+<div style="height: 40px; overflow: auto; width: 100%;"></div></div>
+
+    <div class="wsite-map">
+	 <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = { lat: 42.040209, lng: -74.123670 };
+        var uluru2 = { lat: 42.052021, lng: -74.289621 };
+        var center =  {lat: 42.047264, lng: -74.206586};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: center
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+         var marker2 = new google.maps.Marker({
+          position: uluru2,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs9uKaWRwSJCTvrHDL9M4VCN1p8OOjM40&callback=initMap">
+    </script>
+	</div>
 
 <h2 class="wsite-content-title" style="text-align:center;">Menu</h2>
 
@@ -363,6 +343,8 @@ var STYLE_PREFIX = 'wsite';
 </div>
 
     </div><!-- end content-wrap -->
+    
+
 
     <div class="footer-wrap">
       <div class="container">
@@ -383,7 +365,7 @@ var STYLE_PREFIX = 'wsite';
 					
 						
 
-<div class="wsite-spacer" style="height:50px;"></div>
+<div style="display:" class="wsite-spacer" style="height:50px;"></div>
 
 
 					
